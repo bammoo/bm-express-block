@@ -1,0 +1,48 @@
+{
+  "name": "bm-express-block",
+  "description": "Html or text block for Express views",
+  "version": "1.0.0",
+  "homepage": "https://github.com/bammoo/bm-express-block",
+  "author": {
+    "name": "bammoo",
+    "email": "xiao-jianfeng@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bammoo/bm-express-block.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bammoo/bm-express-block/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/bammoo/bm-express-block/blob/master/LICENSE"
+    }
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "scripts": {
+  },
+  "devDependencies": {
+    "body-parser": "~1.12.0",
+    "cookie-parser": "~1.3.4",
+    "debug": "~2.1.1",
+    "ejs": "~2.3.1",
+    "express": "~4.12.2",
+    "express-partials": "^0.3.0",
+    "morgan": "~1.5.1",
+    "serve-favicon": "~2.2.0"
+  },
+  "dependencies": {},
+  "keywords": [
+    "pagination",
+    "ua"
+  ],
+  "dist": {
+  },
+  "directories": {},
+  "_resolved": ""
+}
