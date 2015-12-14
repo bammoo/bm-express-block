@@ -96,25 +96,27 @@ Block.prototype.toString = Block.prototype.toHtml;
 // Middleware - adds view helpers to every request
 //
 
-module.exports = function(req, res, next) {
-  // request-local hash of named blocks
-  var resLocalBlocks = {};
-  
-  // create the named block if it doesn't already exist
-  function getResLocalBlock(name) {
-    return resLocalBlocks[name] = resLocalBlocks[name] || new Block(name);
-  }
+module.exports = function() {
+  return function bmExpressBlock(req, res, next) {
+    // request-local hash of named blocks
+    var resLocalBlocks = {};
 
-  // setBlock(name, scope html) adds the given HTML to the named block
-  res.locals.setBlock = function setBlock(name, scope, html, ignoreOtherScope) {
-    var blockInstance = getResLocalBlock(name);
-
-    if (html) {
-      blockInstance.addHtml(scope, html, ignoreOtherScope);
+    // create the named block if it doesn't already exist
+    function getResLocalBlock(name) {
+      return resLocalBlocks[name] = resLocalBlocks[name] || new Block(name);
     }
-  }
 
-  res.locals.blocks = resLocalBlocks;
-  
-  next();
+    // setBlock(name, scope, html) adds the given HTML to the named block
+    res.locals.setBlock = function setBlock(name, scope, html, ignoreOtherScope) {
+      var blockInstance = getResLocalBlock(name);
+
+      if (html) {
+        blockInstance.addHtml(scope, html, ignoreOtherScope);
+      }
+    }
+
+    res.locals.blocks = resLocalBlocks;
+    
+    next();
+  }
 };

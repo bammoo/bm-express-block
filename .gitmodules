@@ -1,0 +1,3 @@
+[submodule "examples/express-ejs-block-example"]
+	path = examples/express-ejs-block-example
+	url = https://github.com/bammoo/express-ejs-block-example
