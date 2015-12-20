@@ -1,7 +1,7 @@
 {
   "name": "bm-express-block",
   "description": "Html or text block for Express views",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "homepage": "https://github.com/bammoo/bm-express-block",
   "author": {
     "name": "bammoo",
@@ -14,12 +14,7 @@
   "bugs": {
     "url": "https://github.com/bammoo/bm-express-block/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/bammoo/bm-express-block/blob/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "main": "index.js",
   "engines": {
     "node": ">= 0.10.0"
@@ -38,8 +33,14 @@
   },
   "dependencies": {},
   "keywords": [
-    "pagination",
-    "ua"
+    "express",
+    "ejs",
+    "jade",
+    "view",
+    "middleware",
+    "block",
+    "template",
+    "html"
   ],
   "dist": {
   },
